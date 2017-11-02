@@ -1,0 +1,74 @@
+#confirm-delete-board {
+    
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1002;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    
+    .inner {
+	    position: relative;
+        width: 270px;
+        top:50%;
+        left:50%;
+        border-radius: 10px;
+        overflow: hidden;
+        .box-shadow( 0px 2px 4px rgba(0,0,0,0.5) ) ;
+        transform: translate(-50%, -50%);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .title {
+        padding:15px 20px 0px;
+        background: rgba(248,248,248,0.82);
+        font-size: 17px;
+        line-height: 22px;
+        text-align: center;
+    }
+    .content {
+        background: rgba(248,248,248,0.82);
+        padding:5px 20px 20px;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        
+    }
+    
+    .bottom-controls {
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+        border-top: 1px solid #ccc;
+        background: rgba(248,248,248,0.82);
+        
+        height:42px;
+        line-height: 42px;
+        
+        .control {
+            float: left;
+            width: 50%;
+            height: inherit;
+            line-height: inherit;
+            text-align: center;
+            color:@color-ios-blue;
+            font-size: 17px;
+                        
+            &:first-child {
+                border-right:1px solid #ccc;
+            }
+            
+            &.delete {
+                border-left:0;
+                color:@color-ios-red;
+            }
+        }   
+    }
+    
+    &.open {
+	    display: block;
+    }
+    
+}

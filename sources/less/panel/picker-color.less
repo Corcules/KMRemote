@@ -1,0 +1,43 @@
+.picker-color {
+    height:inherit;
+    .content {
+    	padding:10px;
+    	background:#fff;
+    	div {
+    		position: relative;
+    		display: block;
+            float: left;
+    		width: 10%;
+    		border:4px solid #fff;
+    		
+    		&:last-child {
+                margin-bottom: 42px; // hauteurs de la barre de titre
+            }
+    		
+    		&:before {
+        		content:"";
+        		display: block;
+        		padding-top: 100%;
+    		}
+    		&.bordered:before {
+        		border:1px solid #ddd;
+    		}
+    		
+    		&.selected {
+    			&:after {
+    				content:"";
+    				display: block;
+    				position: absolute;
+    				width: 100%;
+    				height: 100%;
+                    top:0;
+                    left:0;
+    				border:3px solid #fff;
+                    outline: 3px solid @color-ios-blue;
+    			}
+    		}
+    	}
+    }
+}
+
+

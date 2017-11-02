@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="grid" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+  <path d="M5 11h6V5H5V11zM7 7h2v2H7V7z"/>
+  <path d="M13 11h6V5h-6V11zM15 7h2v2h-2V7z"/>
+  <path d="M21 5v6h6V5H21zM25 9h-2V7h2V9z"/>
+  <path d="M5 19h6v-6H5V19zM7 15h2v2H7V15z"/>
+  <path d="M13 19h6v-6h-6V19zM15 15h2v2h-2V15z"/>
+  <path d="M21 19h6v-6h-6V19zM23 15h2v2h-2V15z"/>
+  <path d="M5 27h6v-6H5V27zM7 23h2v2H7V23z"/>
+  <path d="M13 27h6v-6h-6V27zM15 23h2v2h-2V23z"/>
+  <path d="M21 27h6v-6h-6V27zM23 23h2v2h-2V23z"/>
+</svg>

@@ -1,0 +1,40 @@
+#switch-on-finder {
+    display:none;
+}
+
+#board-switch-on-app,
+#board-switch-on-path {
+    border-bottom: 1px solid #ddd;
+    padding-right:50px;
+}
+#board-switch-on-path {
+    input {
+        text-align: right;
+        
+        direction: rtl;
+    }
+}
+
+#action-listen-app, 
+#action-listen-path {
+    position: absolute;
+    height: inherit;
+    width:45px;
+    top:0;
+    right:0;
+    //border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color:transparent;
+    @icone-color: escape(@color-ios-blue);
+    @icone-bgcolor: escape(@color-ios-blue);
+    background-image:url(@icone-record) ;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center center;
+    
+    &.active {
+        @icone-color: escape(@color-ios-red);
+        @icone-bgcolor: escape(@color-ios-red);
+        background-image:url(@icone-record) ;
+    }
+}

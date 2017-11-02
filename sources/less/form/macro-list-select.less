@@ -1,0 +1,86 @@
+// Special refresh macro list
+.kmmacroid {
+    position: relative;
+    select {
+        background-position: right 35px center;
+        padding-right: 65px;
+    }
+}
+
+
+
+.reload-km-action-list {
+    
+    position: absolute;
+    top:0;
+    right:0px;
+    height: 100%;
+    width: 35px;
+    
+    &:before {
+        content:"";
+        display:block;
+        position:inherit;
+        top:50%;
+        left:50%;
+        height: 20px;
+        width:20px;
+        margin-left:-10px;
+        margin-top:-10px;
+        //@icone-color
+        background:url(@icone-refresh);
+        background-repeat: no-repeat;
+    }
+
+    &:after {
+        content:"";
+        display:block;
+        position:inherit;
+        top:50%;
+        left:50%;
+        height: 20px;
+        width:20px;
+        margin-left:-10px;
+        margin-top:-10px;
+        border:1px solid rgba(0,0,0,0.1);
+        border-bottom:1px solid #aaa;
+        border-radius:50%;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation: load8 400ms infinite linear;
+        animation: load8 400ms infinite linear;
+        display:none;
+    }
+    
+    &.reload {
+        &:before {
+            display:none;
+        }
+        &:after {
+            display:block;
+        }
+    }
+    
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

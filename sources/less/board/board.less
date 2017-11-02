@@ -1,0 +1,69 @@
+#boards {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+
+.board {
+    position: absolute;
+    overflow: hidden;
+    .user-select();
+    
+    display: none;
+    
+    &.active {
+        display: block;
+    }
+    
+
+    
+    .grid {
+        height:inherit;
+        width: inherit;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -webkit-align-content: flex-start;
+        .user-select();
+    }
+    
+    
+    .grid-unit {
+        height:20px; 
+        width: 20px; 
+        background-color: rgba(255,255,255,0.3);
+        background-clip: content-box;
+        border:1px solid transparent;
+        .user-select();
+        
+        &.hidden {
+            visibility: hidden;
+        }
+        
+        &.on {
+            background-clip: content-box;
+            background-color: rgb(199,242,255);
+            border:1px solid transparent;
+        }
+    }
+    
+    &.bright {
+        .grid-unit {
+            background-color: rgba(127,127,127,0.3);
+            &.on {
+                background-color: rgb(199,242,255);
+            }
+        }
+        
+        .bright { // widget bright on bright
+            outline: 1px solid #ddd;
+        }
+    }
+    
+    
+}
