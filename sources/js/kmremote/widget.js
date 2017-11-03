@@ -210,28 +210,7 @@ function build_widget( obj, activate  ) {
             handle:'.handler-move',
 
             drag: function( event , ui ) {
-            
-/*
-                Gestion des conflits
-                var nsR = '' + ( (ui.position.top / 20 ) + 1) ;
-				var nsC = '' + ( (ui.position.left / 20 ) + 1) ;
-                var neR = '' + ( parseInt(nsR,10) + (parseInt(w.widget_eR,10) - parseInt(w.widget_sR,10) ) );
-                var neC = '' + ( parseInt(nsC,10) + (parseInt(w.widget_eC,10) - parseInt(w.widget_sC,10) ) );
-                
-                if ( $.inArray(nsR+'_'+nsC, occupiedGrid ) > -1 ) {
-                    return false;
-                }
-                if ( $.inArray(nsR+'_'+neC, occupiedGrid ) > -1 ) {
-                    return false;
-                }
-                if ( $.inArray(neR+'_'+nsC, occupiedGrid ) > -1 ) {
-                    return false;
-                }
-                if ( $.inArray(neR+'_'+neC, occupiedGrid ) > -1 ) {
-                    return false;
-                }
-*/
-                    
+      
             },
             stop: function( event , ui ) {
                 // gestion des contraintes - conflit avec un autre widget
