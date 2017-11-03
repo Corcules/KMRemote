@@ -176,8 +176,8 @@ function kmr_launch_km_macro_with_param( ) {
     exec("osascript -e 'tell app \"Keyboard Maestro Engine\" to do script \"$action\" with parameter \"$param\"' " );
     exit(0);
 }
-add_action('wp_ajax_launchmacrowithparam', 'kmr_get_current_front_app_name' );
-add_action('wp_ajax_nopriv_launchmacrowithparam', 'kmr_get_current_front_app_name' );
+//add_action('wp_ajax_launchmacrowithparam', 'kmr_get_current_front_app_name' );
+//add_action('wp_ajax_nopriv_launchmacrowithparam', 'kmr_get_current_front_app_name' );
 
 
 
@@ -196,8 +196,8 @@ function kmr_get_current_front_finder_window( ) {
     $var = ob_get_clean();
     wp_send_json( $var );
 }
-add_action('wp_ajax_getCurrentFinderW', 'kmr_get_current_front_finder_window' );
-add_action('wp_ajax_nopriv_getCurrentFinderW', 'kmr_get_current_front_finder_window' ); 
+//add_action('wp_ajax_getCurrentFinderW', 'kmr_get_current_front_finder_window' );
+//add_action('wp_ajax_nopriv_getCurrentFinderW', 'kmr_get_current_front_finder_window' ); 
 
 
 
@@ -213,8 +213,8 @@ function kmr_get_current_front_app_name( ) {
     $var = ob_get_clean();
     wp_send_json( $var );
 }    
-add_action('wp_ajax_getcurrentfrontappname', 'kmr_get_current_front_app_name' );
-add_action('wp_ajax_nopriv_getcurrentfrontappname', 'kmr_get_current_front_app_name' );  
+//add_action('wp_ajax_getcurrentfrontappname', 'kmr_get_current_front_app_name' );
+//add_action('wp_ajax_nopriv_getcurrentfrontappname', 'kmr_get_current_front_app_name' );  
 
 
 
@@ -234,8 +234,6 @@ function kmr_get_maccurrent_infos( ) {
 }
 add_action('wp_ajax_getcurrentmacinfos', 'kmr_get_maccurrent_infos' );
 add_action('wp_ajax_nopriv_getcurrentmacinfos', 'kmr_get_maccurrent_infos' );  
-
-
 
 
 
