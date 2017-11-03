@@ -75,8 +75,6 @@ function kmr_init() {
     });
 
     picker_action_reload();
-    
-
     activate_check_mac_infos();
 }
 
@@ -115,127 +113,16 @@ kmr_init();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-$(document).on('blur', 'input, textarea', function () {
-    setTimeout(function() {
-            $(document).scrollTop($(document).scrollTop())
-        }, 1);
-});
-*/
-
-
-// Eviter le push de la page par le keyboard au focus sur un élément de formulaire : pas terrible mais fonctionne
-
-/*
-$('*').on('focus', function(e) {
-    e.stopPropagation();
-    e.preventDefault(  );
-    window.scrollTo(0,0); //the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
-    document.body.scrollTop = 0;
-    return false;
-});
-$('*').on('blur', function(e) {
-    e.stopPropagation();
-    e.preventDefault(  );
-    window.scrollTo(0,0); //the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
-    document.body.scrollTop = 0;
-   
-    return false;
-});
-
-setTimeout(function() { $(window).scrollTop(0); }, 0);
-*/
-
-// $(window).on('scroll', function(e){
-//    e.preventDefault( ) ;
-//    window.scrollTo(0,0);
-//    document.body.scrollTop = 0;
-// });
-// $(document).on('scroll', function(e){
-//    e.preventDefault( ) ;
-//    window.scrollTo(0,0);
-//    document.body.scrollTop = 0;
-// });
-// $('body').on('scroll', function(e){
-//    e.preventDefault( ) ;
-//    window.scrollTo(0,0);
-//    document.body.scrollTop = 0;
-// });
-
-
-
-
-
-
-// désactive le comportement standard du formulaire
-/*
-$('#form-widget-option').on('submit', function(e){
-    e.preventDefault();
-    $('#panel-widget-option').find('.save').trigger('click');
-    return false;
-});
-*/
-
-
-/*
-$(document).on('touchstart', function(e) {
-setTimeout(function() {
-document.activeElement.blur();
-}, 0);
-});
-$(document).on('focus', 'input, textarea', function() {
-setTimeout(function() {
-window.scrollTo(document.body.scrollLeft, document.body.scrollTop);
-}, 0);
-});
-*/
-
-
-$('input').on('touchstart ', function(e) {
+// Prevent IOS keyboard to offset globally app when focus on an input by positionning the input is on the top of the panel before the focus
+$('input[type="text"],textarea').on('touchstart', function(e) {
     e.stopPropagation();
     e.preventDefault();
-    var field = $(this);
-    
-
-    var pos  = $(this).position().top + $('.content').scrollTop() - 50 ;
-    $('.content').animate({scrollTop : pos } , 300 , function () {
-        field.focus();
-    }) ;
-
-});
-
-
-
-
-/*
-$('.field').on('touchstart ', function(e) {
-    e.stopPropagation();
-    e.preventDefault();
-    var field = $(this).find('input,textarea,select');
-    var pos  = $(this).position().top + $('.content').scrollTop() - 50 ;
-    $('.content').animate({scrollTop : pos } , 300 , function () {
-        field.focus();
+    var content = $(this).parents('.content');
+    var pos  = $(this).offset().top + content.scrollTop() - 62 ;
+    content.animate({scrollTop : pos } , 300 , function () {
+        $(this).focus();
     }) ;
 });
-*/
 
 
 
