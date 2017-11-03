@@ -67,7 +67,7 @@
 		<div class="panel" id="panel-board">
 			<div class="inner">
     			<div class="main">
-    				<div class="title"><span>New board</span>
+    				<div class="title"><span>Edit board</span>
         				<div class="controls">
             				<div class="control left cancel" id="action-panel-board-cancel">Cancel</div>
             				<div class="control right" id="action-panel-board-save">OK</div>
@@ -161,7 +161,7 @@
 		<div class="panel" id="panel-widget">
 			<div class="inner">
     			<div class="main">
-    				<div class="title"><span>New widget</span>
+    				<div class="title"><span>Edit widget</span>
 	    				<div class="controls">
             				<div class="control left cancel" id="action-panel-widget-cancel">Cancel</div>
             				<div class="control right" id="action-panel-widget-save">OK</div>
