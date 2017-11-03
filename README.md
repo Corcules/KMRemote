@@ -69,7 +69,7 @@ By default, the app is in "run" mode.
 
 ### MENU
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-menu-run.png" width="100%" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-menu-run.png" width="100%" border="1" style="border:1px solid #ccc"/>
 
 Tap on the "gearing" icon on the right top corner to open the menu panel.
 <br>
