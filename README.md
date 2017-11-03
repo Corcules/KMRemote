@@ -17,7 +17,6 @@ KMRemote is a single page webapp dedicated to build and use control boards to la
 ><br>
 ><br>
 >*You will need :*
-
 >* *A mac computer*
 >* *The fantastic [Keyboard Maestro](https://www.keyboardmaestro.com) app*
 >* *A working install of [WordPress](https://wordpress.org) on the mac, accessible on LAN*
