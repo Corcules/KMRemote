@@ -1,4 +1,10 @@
 <?php
+/* WP Custom post - Board and widget *******************************************
+ *                                                                             *
+ * UnComment if you want to see custom post in the WP Admin UI.                *
+ *                                                                             *
+*******************************************************************************/
+/*
 function cpt_board() {
 	$labels = array(
 		'name'                  => 'Boards',
@@ -104,6 +110,11 @@ function cpt_widget() {
 	register_post_type( 'widget', $args );
 }
 add_action( 'init', 'cpt_widget', 0 );
+*/
+
+
+
+
 
 /* KEYBOARD MAESTRO - Get Macro list *******************************************
  *                                                                             *
@@ -143,9 +154,6 @@ add_action('wp_ajax_nopriv_macrolist', 'get_km_macro_list' );
 
 
 
-
-
-
 /* KEYBOARD MAESTRO - Launch a specific KM macro *******************************
  *                                                                             *
 *******************************************************************************/ 
@@ -158,13 +166,10 @@ add_action('wp_ajax_launchmacro', 'kmr_launch_km_macro' );
 add_action('wp_ajax_nopriv_launchmacro', 'kmr_launch_km_macro' );
 
 
-
-
-
-
 /* KEYBOARD MAESTRO - Launch macro with parameter ******************************
  *                                                                             *
 *******************************************************************************/
+// NOT USED YET
 function kmr_launch_km_macro_with_param( ) {
     $action = $_POST['action_uid'] ;
     $param = $_POST['action_param'];
@@ -184,6 +189,7 @@ add_action('wp_ajax_nopriv_launchmacrowithparam', 'kmr_get_current_front_app_nam
  * allow to switch to board according a particular finder window in front      *
  *                                                                             *
 *******************************************************************************/
+// NOT USED ANYMORE > SEE kmr_get_maccurrent_infos()
 function kmr_get_current_front_finder_window( ) {
     ob_start();
     passthru("osascript -e 'tell app \"Finder\" to return POSIX path of (insertion location as alias)' ");
@@ -195,13 +201,12 @@ add_action('wp_ajax_nopriv_getCurrentFinderW', 'kmr_get_current_front_finder_win
 
 
 
-
-
 /* SYSTEM - Get active app name ************************************************
  *                                                                             *
  * allow to switch to board according to a particular app                      *
  *                                                                             *
 *******************************************************************************/
+// NOT USED ANYMORE > SEE kmr_get_maccurrent_infos()
 function kmr_get_current_front_app_name( ) {
     ob_start();
     passthru("osascript -e 'tell app \"System Events\" to return the name of application processes whose frontmost is true'");
@@ -213,8 +218,11 @@ add_action('wp_ajax_nopriv_getcurrentfrontappname', 'kmr_get_current_front_app_n
 
 
 
-
-
+/* SYSTEM - Get mac info *******************************************************
+ *                                                                             *
+ * Called via ajax by interval, return app and finder location foreground      *
+ *                                                                             *
+*******************************************************************************/
 function kmr_get_maccurrent_infos( ) {
     ob_start();
     passthru("osascript -e 'tell app \"System Events\" to return the name of application processes whose frontmost is true'");
@@ -230,7 +238,11 @@ add_action('wp_ajax_nopriv_getcurrentmacinfos', 'kmr_get_maccurrent_infos' );
 
 
 
+
+
 /* KMR - SAVE/UPDATE ***********************************************************
+ *                                                                             *
+ * Generic function, need a post type as argument                              *
  *                                                                             *
 *******************************************************************************/
 function kmr_save ( $type ) {
@@ -254,6 +266,8 @@ function kmr_save ( $type ) {
 
 /* KMR - Save/Upadte Widget ****************************************************
  *                                                                             *
+ * Wrapper of kmr_save() for widget                                            *
+ *                                                                             *
 *******************************************************************************/
 function kmr_save_widget() {
 	kmr_save( 'widget' );
@@ -262,7 +276,9 @@ add_action('wp_ajax_savewidget', 'kmr_save_widget' );
 add_action('wp_ajax_nopriv_savewidget', 'kmr_save_widget' );
 
 
-/* KMR - Save Board ************************************************************
+/* KMR - Save/Update Board *****************************************************
+ *                                                                             *
+ * Wrapper of kmr_save() for widget                                            *
  *                                                                             *
 *******************************************************************************/
 function kmr_save_board( ) {
@@ -272,7 +288,10 @@ add_action('wp_ajax_saveboard', 'kmr_save_board' );
 add_action('wp_ajax_nopriv_saveboard', 'kmr_save_board' );
 
 
+
 /* KMR - DELETE ****************************************************************
+ *                                                                             *
+ * Generic function, need a post type as argument                              *
  *                                                                             *
 *******************************************************************************/
 function kmr_delete( $type , $id ) {
@@ -298,6 +317,11 @@ function kmr_delete( $type , $id ) {
 }
 
 
+/* KMR - Delete Board **********************************************************
+ *                                                                             *
+ * Wrapper for kmr_delete()                                                    *
+ *                                                                             *
+*******************************************************************************/ 
 function kmr_delete_board() {
     $id = ( isset($_POST['pid']) ) ? $_POST['pid'] : '' ;
     if ( !empty($id) ) {
@@ -307,6 +331,14 @@ function kmr_delete_board() {
 add_action('wp_ajax_deleteboard', 'kmr_delete_board' );
 add_action('wp_ajax_nopriv_deleteboard', 'kmr_delete_board' );
 
+
+
+
+/* KMR - Delete Widget *********************************************************
+ *                                                                             *
+ * Wrapper for kmr_delete()                                                    *
+ *                                                                             *
+*******************************************************************************/
 function kmr_delete_widget() {
     $id = ( isset($_POST['pid']) ) ? $_POST['pid'] : '' ;
     if ( !empty($id) ) {
@@ -315,6 +347,8 @@ function kmr_delete_widget() {
 }
 add_action('wp_ajax_deletewidget', 'kmr_delete_widget' );
 add_action('wp_ajax_nopriv_deletewidget', 'kmr_delete_widget' );
+
+
 
 
 /* KMR - GET DATA **************************************************************
@@ -350,23 +384,27 @@ function kmr_get_data( $type ) {
 /* KMR - Get Boards ************************************************************
  *                                                                             *
 *******************************************************************************/
+// NO MORE USED > SEE kmr_get_all_datas()
 function kmr_get_all_boards() {
     $boards = kmr_get_data('board');
     wp_send_json( $boards );
 }
-add_action('wp_ajax_getboards', 'kmr_get_all_boards' );
-add_action('wp_ajax_nopriv_getboards', 'kmr_get_all_boards' );
+//add_action('wp_ajax_getboards', 'kmr_get_all_boards' );
+//add_action('wp_ajax_nopriv_getboards', 'kmr_get_all_boards' );
 
 
 /* KMR - Get Widgets ***********************************************************
  *                                                                             *
 *******************************************************************************/
+// NO MORE USED > SEE kmr_get_all_datas()
 function kmr_get_all_widgets() {
     $widgets = kmr_get_data('widget');
     wp_send_json( $widgets );
 }
-add_action('wp_ajax_getwidgets', 'kmr_get_all_widgets' );
-add_action('wp_ajax_nopriv_getwidgets', 'kmr_get_all_widgets' );
+//add_action('wp_ajax_getwidgets', 'kmr_get_all_widgets' );
+//add_action('wp_ajax_nopriv_getwidgets', 'kmr_get_all_widgets' );
+
+
 
 /* KMR - Get all datas *********************************************************
  *                                                                             *
@@ -382,6 +420,12 @@ function kmr_get_all_datas() {
 }
 add_action('wp_ajax_getdatas', 'kmr_get_all_datas' );
 add_action('wp_ajax_nopriv_getdatas', 'kmr_get_all_datas' );
+
+
+
+
+
+
 
 
 /* THEME - Color picker content ************************************************
@@ -487,25 +531,5 @@ function theme_helper_picker_icon_content() {
         }   
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
