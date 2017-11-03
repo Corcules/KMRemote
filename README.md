@@ -1,37 +1,49 @@
 # KMRemote
 
-KMRemote is a webapp based on WordPress to build and use launcher board to control your mac remotely from a tablet device.
+KMRemote is a single page webapp dedicated to build and use control boards to launch Keyboard Maestro macros remotely.
+<br>
+<br>
+<span style="color:orange">**Note**</span> : KMRemote is a WordPress theme.
+<br>
+<br>
+<span style="color:orange">**Note**</span>: Build for a tablet for my own use. At this time, this will not work properly on a phone or on desktop browser. This will be improved... see plan below.
+<br>
+<br>
+<span style="color:orange">**Note**</span>: At this time, there is no security layer in KMRemote. Every one having access to you LAN would be abble to launch Keyboard Maestro macros on your Mac... This would be added as an option in future version... see Plan below.
+<br>
+<br>
 
 >*Restricted area : beware that KMRemote will works on a very specific environment.*
-
+<br>
+<br>
 >*You will need :*
 
 >* *A mac computer*
 >* *The fantastic [Keyboard Maestro](https://www.keyboardmaestro.com) app*
->* *A working install of [WordPress](https://wordpress.org) on the mac, accessible via LAN*
+>* *A working install of [WordPress](https://wordpress.org) on the mac, accessible on LAN*
 >* *A tablet device.*
-
 
 ### Main features
 
 * Configure boards.
-* Configure widgets on boards to launch a specific KM macro.
-* Automatically switch to a particular board depending on which app or Finder folder is foreground on the mac.
+* Configure widgets on boards.
+* Automatically switch to a particular board depending on which App or Finder folder is foreground on the mac.
+* Launch Keyboard Maestro macro by taping on a widget.
 
 ## Browser support
 
 Only tested on Safari IOS.
 <br>
-Altought shoul works fine on every modern mobile browsers.
+Altought should works fine on every modern mobile browsers.
 <br>
-Initially build for tablet screen. A more flexible version ( phones screen, desktop browser) is considered...
+Initially build for tablet screen. A more flexible version ( phone screens, desktop browsers) is considered...
 
 ## Installation and Access on Lan
 
 Assuming that you have a working local install of WordPress running (with [MAMP PRO](https://www.mamp.info), [Local](https://local.getflywheel.com), build-in macOS AMP, ...) on the mac, you need to access to the webapp via LAN.
 <br>
 <br>
-Just install and activate the them in WordPress aas any other.
+Just install and activate the KMRemote theme in WordPress as any other.
 <br>
 <br>
 To access remotely to the webapp from LAN really depends on your local web environment. 
@@ -42,7 +54,7 @@ With [MAMP PRO](https://www.mamp.info), you can :
 
 This tools may be useful :
 
-* [squidman](http://squidman.net/squidman/) proxy server
+* [Squidman](http://squidman.net/squidman/) proxy server
 * [Hosts](http://permanentmarkers.nl/software.html) preference pane to manage host file
 
 
@@ -60,7 +72,7 @@ By default, the app is in "run" mode.
 
 <img src="http://www.corcules.com/ressources/kmremote/kmr-menu-run.png" width="100%" style="border:1px solid #ccc"/>
 
-Tap on the gear icon on the right top corner to open the menu panel.
+Tap on the "gearing" icon on the right top corner to open the menu panel.
 <br>
 By default, the app is in "run" mode.
 <br>in "run" mode, the menu show :
@@ -88,12 +100,11 @@ In "edit" modee, tap on "New board".
 * Several board infos
 * Background color and icone for board (see "Pickers" below)
 
-#### Board behaviour
+#### Board behaviour - AUTOSWITCH
 
 Activate board when a specific application or a Finder location on mac goes foreground.
 
 <img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel-switch-app.png" style="border:1px solid #ccc"/>
-
 
 To select the application, tap on the listen buttoon, bring the target app foreground on the mac, tap again on the listen button. You can also manually write the name of the application.
 <br>
@@ -200,7 +211,7 @@ In "run" mode, a tap-hold on a widget will show a tooltip with title, note and m
 * Add security layer
 * Inner wigdet action such as "Activate board xxx", "Toggle Autoswitch", 
 * Launch KM Macro with parameter
-* Multi mobile device connected to the mac but with different boards
+* Multi mobile device connected to the mac but with differents boards
 * Add global app preferences panel
 * Redesign menu panel
 

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="kmremote">KMRemote</h1>
+
+<p>KMRemote is a single page webapp dedicated to build and use control boards to launch Keyboard Maestro macros remotely.
+<br>
+<br>
+<span style="color:orange"><strong>Note</strong></span> : KMRemote is a WordPress theme.
+<br>
+<br>
+<span style="color:orange"><strong>Note</strong></span>: Build for a tablet for my own use. At this time, this will not work properly on a phone or on desktop browser. This will be improved&#8230; see plan below.
+<br>
+<br>
+<span style="color:orange"><strong>Note</strong></span>: At this time, there is no security layer in KMRemote. Every one having access to you LAN would be abble to launch Keyboard Maestro macros on your Mac&#8230; This would be added as an option in future version&#8230; see Plan below.
+<br>
+<br></p>
+
+<blockquote>
+<p><em>Restricted area : beware that KMRemote will works on a very specific environment.</em>
+<br>
+<br>
+<em>You will need :</em></p>
+
+<ul>
+<li><em>A mac computer</em></li>
+<li><em>The fantastic <a href="https://www.keyboardmaestro.com">Keyboard Maestro</a> app</em></li>
+<li><em>A working install of <a href="https://wordpress.org">WordPress</a> on the mac, accessible on LAN</em></li>
+<li><em>A tablet device.</em></li>
+</ul>
+</blockquote>
+
+<h3 id="mainfeatures">Main features</h3>
+
+<ul>
+<li>Configure boards.</li>
+<li>Configure widgets on boards.</li>
+<li>Automatically switch to a particular board depending on which App or Finder folder is foreground on the mac.</li>
+<li>Launch Keyboard Maestro macro by taping on a widget.</li>
+</ul>
+
+<h2 id="browsersupport">Browser support</h2>
+
+<p>Only tested on Safari IOS.
+<br>
+Altought should works fine on every modern mobile browsers.
+<br>
+Initially build for tablet screen. A more flexible version ( phone screens, desktop browsers) is considered&#8230;</p>
+
+<h2 id="installationandaccessonlan">Installation and Access on Lan</h2>
+
+<p>Assuming that you have a working local install of WordPress running (with <a href="https://www.mamp.info">MAMP PRO</a>, <a href="https://local.getflywheel.com">Local</a>, build-in macOS AMP, &#8230;) on the mac, you need to access to the webapp via LAN.
+<br>
+<br>
+Just install and activate the KMRemote theme in WordPress as any other.
+<br>
+<br>
+To access remotely to the webapp from LAN really depends on your local web environment. </p>
+
+<p>With <a href="https://www.mamp.info">MAMP PRO</a>, you can :
+- use Xip.io (<a href="https://documentation-3.mamp.info/en/documentation/mamp-pro/#4.2.1-General-Settings-Host">info</a>, <a href="http://xip.io">Xip</a>)
+- set IP/Port to */80 and add <em>yourcomputername.local</em> as alias. Use <em>yourcomputername.local</em> remotely.</p>
+
+<p>This tools may be useful :</p>
+
+<ul>
+<li><a href="http://squidman.net/squidman/">Squidman</a> proxy server</li>
+<li><a href="http://permanentmarkers.nl/software.html">Hosts</a> preference pane to manage host file</li>
+</ul>
+
+<h2 id="usage">USAGE</h2>
+
+<p>KMRemote has 2 MODES, &#8220;edit&#8221; and &#8220;run&#8221;.
+<br>
+In &#8220;edit&#8221; mode, you can compose your boards.
+<br>
+In &#8220;run&#8221; mode, you can launch macros.
+<br>
+By default, the app is in &#8220;run&#8221; mode.</p>
+
+<h3 id="menu">MENU</h3>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-menu-run.png" width="100%" style="border:1px solid #ccc"/></p>
+
+<p>Tap on the &#8220;gearing&#8221; icon on the right top corner to open the menu panel.
+<br>
+By default, the app is in &#8220;run&#8221; mode.
+<br>in &#8220;run&#8221; mode, the menu show :
+* a button to activate &#8220;edit&#8221; mode.
+* a button to toggle &#8220;autoswitch&#8221;(see below)
+* the list of boards in which you can navigate</p>
+
+<p><br>
+Tap on &#8220;Edit&#8221; button to activate the &#8220;edit&#8221; mode.</p>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-menu-edit.png" width="100%" style="border:1px solid #ccc"/></p>
+
+<p>On &#8220;edit&#8221; mode, menu let you :
+* activate &#8220;run&#8221; mode&quot;
+* create new board
+* edit current board
+* delete current board (and it&#8217;s widget)
+* the list of boards in which you can navigate</p>
+
+<h3 id="newboard">NEW BOARD</h3>
+
+<p>In &#8220;edit&#8221; modee, tap on &#8220;New board&#8221;.</p>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel.png" width="100%" style="border:1px solid #ccc"/></p>
+
+<ul>
+<li>Several board infos</li>
+<li>Background color and icone for board (see &#8220;Pickers&#8221; below)</li>
+</ul>
+
+<h4 id="boardbehaviour-autoswitch">Board behaviour - AUTOSWITCH</h4>
+
+<p>Activate board when a specific application or a Finder location on mac goes foreground.</p>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel-switch-app.png" style="border:1px solid #ccc"/></p>
+
+<p>To select the application, tap on the listen buttoon, bring the target app foreground on the mac, tap again on the listen button. You can also manually write the name of the application.
+<br>
+<br>
+If the name of the application is &#8220;Finder&#8221;, another option field appear to select a specific Finder location.</p>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel-switch-path.png" style="border:1px solid #ccc"/></p>
+
+<blockquote>
+<p><strong>Note</strong> : if two boards are set with the same behaviour then only the first one will be activated when condition meet on the mac. But you can switch manually to other board with using the board list in the menu panel.</p>
+</blockquote>
+
+<h3 id="newwidgets">NEW WIDGETS</h3>
+
+<p>When in &#8220;edit&#8221; mode, the current board show a grid. Slide on the grid to initiate a widget.</p>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-widget-panel.png" width="100%" style="border:1px solid #ccc"/></p>
+
+<ul>
+<li><strong>Action</strong> : Select a Keyboard Maestro.</li>
+<li><strong>View</strong> : Set up the appearance of the widget - Toggle some others options. (see &#8220;Pickers&#8221; below)</li>
+<li><strong>Position</strong> : When in view &#8220;Both&#8221;, icone + title, options appear to precise the relative position between them.</li>
+</ul>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-widget-icone-position.png" style="border:1px solid #ccc"/></p>
+
+<h3 id="pickers">Pickers</h3>
+
+<p>Pickers on the app react the same way. Tap on an item to select. Tap on &#8220;Back&#8221; button to valid the selection or on &#8220;Cancel&#8221; to not.
+<br>
+Double tap on an item is a shorcut to select, valid and close the picker panel.</p>
+
+<h4 id="color">Color</h4>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-color-picker.png" style="border:1px solid #ccc"/></p>
+
+<h4 id="icones">Icones</h4>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-icon-picker.png" style="border:1px solid #ccc"/></p>
+
+<p>Icons use <a href="http://fontawesome.io/icons/">Font Awesome list</a>
+<br>
+Icons are searchable.</p>
+
+<h4 id="actions">Actions</h4>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-picker-macro.png" style="border:1px solid #ccc"/></p>
+
+<p>Picker &#8220;Action&#8221; will get the macro list from Keyboard Maestro.
+<br>
+The list is initiated at KMRemote launch. If you create a new macro on Keyboard Maestro, your abble to refresh the list on the picker by tap on the refresh button on the right side of the search field.
+<br>
+Macros are searchable.</p>
+
+<h3 id="widgetsmanipulation">Widgets manipulation</h3>
+
+<p>In &#8220;edit&#8221; mode, you can manipulate widget. Select the widget by tap-holding it.</p>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-widget.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-widget-selected.png" style="border:1px solid #ccc"/></p>
+
+<h5 id="drag">Drag</h5>
+
+<p>A selected widget is draggable on the grid.</p>
+
+<h5 id="resize">Resize</h5>
+
+<p>Use resize handlers to resize it.</p>
+
+<h5 id="edit">Edit</h5>
+
+<p>Tap a selected widget to edit it&#8217;s properties.</p>
+
+<h5 id="delete">Delete</h5>
+
+<p>For deleting a widget, open widget panel properties a scroll to the bottom of the form.</p>
+
+<h3 id="widgetinrunmode">Widget in Run Mode</h3>
+
+<p>In &#8220;run&#8221; mode, a tap on a widget call macro execution on the mac.
+<br>
+In &#8220;run&#8221; mode, a tap-hold on a widget will show a tooltip with title, note and macro name of the widget.</p>
+
+<p><img src="http://www.corcules.com/ressources/kmremote/kmr-widget-tooltip.png" style="border:1px solid #ccc"/></p>
+
+<h2 id="usedandthanks">Used and thanks</h2>
+
+<h3 id="serverside">Server side</h3>
+
+<ul>
+<li><a href="https://wordpress.org">WordPress</a> as a middleware</li>
+</ul>
+
+<h3 id="javascript:">Javascript:</h3>
+
+<ul>
+<li><a href="https://jquery.com">JQuery</a> as main javasccript framework</li>
+<li><a href="http://jqueryui.com">JQuery UI</a> for drag&#8217;n drop and resizable features</li>
+<li><a href="https://github.com/furf/jquery-ui-touch-punch">jQuery UI Touch Punch</a> for adding to touch event to JQuery UI</li>
+<li><a href="http://www.gsgd.co.uk/sandbox/jquery/easing/">JQuery Easing</a> for animation improvement</li>
+<li><a href="https://github.com/ftlabs/fastclick">FastClick</a> for removing click delay on touch browsers</li>
+<li><a href="https://github.com/lazd/iNoBounce/">iNoBounce</a> for control bouncing scroll on IOS</li>
+<li><a href="https://github.com/benmajor/jQuery-Touch-Events">jQuery Mobile Events</a> for touch event as &#8220;tap&#8221;, &#8220;taphold&#8221;,&#8230;</li>
+<li><a href="https://github.com/typicaljoe/taffydb">TaffyDB</a> for a local javasccript database</li>
+<li><a href="https://github.com/bgrins/TinyColor">TinyColor</a> for color comparaison</li>
+<li><a href="http://iamceege.github.io/tooltipster/">Tooltipster</a> for nice and flexible tooltips</li>
+</ul>
+
+<h3 id="iconwebfont:">Icon web font :</h3>
+
+<ul>
+<li><a href="http://fontawesome.io">Font Awesome</a></li>
+</ul>
+
+<h2 id="plan">Plan</h2>
+
+<ul>
+<li>Adaptative for Phone screens and Desktop Browser</li>
+<li>Themes for boards</li>
+<li>Add security layer</li>
+<li>Inner wigdet action such as &#8220;Activate board xxx&#8221;, &#8220;Toggle Autoswitch&#8221;,</li>
+<li>Launch KM Macro with parameter</li>
+<li>Multi mobile device connected to the mac but with differents boards</li>
+<li>Add global app preferences panel</li>
+<li>Redesign menu panel</li>
+</ul>
+
+<h2 id="licence">Licence</h2>
+
+<p><a href="LICENSE.md">MIT License</a>. © 2017 <a href="http://corcules.com">Corcules / Romain Jacquet</a>.</p>
+
+</body>
+</html>
