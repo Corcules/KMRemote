@@ -14,8 +14,8 @@ KMRemote is a single page webapp dedicated to build and use control boards to la
 <br>
 
 >*Restricted area : beware that KMRemote will works on a very specific environment.*
-<br>
-<br>
+><br>
+><br>
 >*You will need :*
 
 >* *A mac computer*
