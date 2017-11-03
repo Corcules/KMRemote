@@ -653,12 +653,6 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/README.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/README.html",
-		"oF": 0
-		},
 	"\/README.md": {
 		"cS": 0,
 		"eF": 1,
@@ -1046,23 +1040,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/sources\/less\/form\/bool.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/sources\/less\/form\/color-selector.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "\/sources\/less\/form\/color-selector.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -1853,12 +1830,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/style.css.map",
-		"oF": 0
-		},
-	"\/test.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/test.html",
 		"oF": 0
 		}
 	},

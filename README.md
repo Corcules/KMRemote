@@ -69,7 +69,7 @@ By default, the app is in "run" mode.
 
 ### MENU
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-menu-run.png" width="100%" border="1" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-menu-run_.png" width="100%" border="1" style="border:1px solid #ccc"/>
 
 Tap on the "gearing" icon on the right top corner to open the menu panel.
 <br>
@@ -82,7 +82,7 @@ By default, the app is in "run" mode.
 <br>
 Tap on "Edit" button to activate the "edit" mode.
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-menu-edit.png" width="100%" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-menu-edit_.png" width="100%" style="border:1px solid #ccc"/>
 
 On "edit" mode, menu let you :
 * activate "run" mode"
@@ -94,7 +94,7 @@ On "edit" mode, menu let you :
 ### NEW BOARD
 In "edit" modee, tap on "New board".
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel.png" width="100%" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel_.png" width="100%" style="border:1px solid #ccc"/>
 
 * Several board infos
 * Background color and icone for board (see "Pickers" below)
@@ -103,7 +103,7 @@ In "edit" modee, tap on "New board".
 
 Activate board when a specific application or a Finder location on mac goes foreground.
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel-switch-app.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel-switch-app_.png" style="border:1px solid #ccc"/>
 
 To select the application, tap on the listen buttoon, bring the target app foreground on the mac, tap again on the listen button. You can also manually write the name of the application.
 <br>
@@ -111,7 +111,7 @@ To select the application, tap on the listen buttoon, bring the target app foreg
 If the name of the application is "Finder", another option field appear to select a specific Finder location.
 
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel-switch-path.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-board-panel-switch-path_.png" style="border:1px solid #ccc"/>
 
 > **Note** : if two boards are set with the same behaviour then only the first one will be activated when condition meet on the mac. But you can switch manually to other board with using the board list in the menu panel.
 
@@ -120,14 +120,14 @@ If the name of the application is "Finder", another option field appear to selec
 
 When in "edit" mode, the current board show a grid. Slide on the grid to initiate a widget.
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-widget-panel.png" width="100%" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-widget-panel_.png" width="100%" style="border:1px solid #ccc"/>
 
 
 * **Action** : Select a Keyboard Maestro.
 * **View** : Set up the appearance of the widget - Toggle some others options. (see "Pickers" below)
 * **Position** : When in view "Both", icone + title, options appear to precise the relative position between them.
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-widget-icone-position.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-widget-icone-position_.png" style="border:1px solid #ccc"/>
 
 ### Pickers
 
@@ -138,11 +138,11 @@ Double tap on an item is a shorcut to select, valid and close the picker panel.
 
 #### Color
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-color-picker.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-color-picker_.png" style="border:1px solid #ccc"/>
 
 #### Icones
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-icon-picker.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-icon-picker_.png" style="border:1px solid #ccc"/>
 
 Icons use [Font Awesome list](http://fontawesome.io/icons/)
 <br>
@@ -150,7 +150,7 @@ Icons are searchable.
 
 #### Actions
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-picker-macro.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-picker-macro_.png" style="border:1px solid #ccc"/>
 
 Picker "Action" will get the macro list from Keyboard Maestro. 
 <br>
@@ -163,8 +163,8 @@ Macros are searchable.
 
 In "edit" mode, you can manipulate widget. Select the widget by tap-holding it.
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-widget.png" style="border:1px solid #ccc"/>
-<img src="http://www.corcules.com/ressources/kmremote/kmr-widget-selected.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-widget_.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-widget-selected_.png" style="border:1px solid #ccc"/>
 
 ##### Drag
 A selected widget is draggable on the grid.
@@ -181,7 +181,7 @@ In "run" mode, a tap on a widget call macro execution on the mac.
 <br>
 In "run" mode, a tap-hold on a widget will show a tooltip with title, note and macro name of the widget.
 
-<img src="http://www.corcules.com/ressources/kmremote/kmr-widget-tooltip.png" style="border:1px solid #ccc"/>
+<img src="http://www.corcules.com/ressources/kmremote/kmr-widget-tooltip_.png" style="border:1px solid #ccc"/>
 
 ## Used and thanks
 
