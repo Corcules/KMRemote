@@ -117,10 +117,11 @@ kmr_init();
 $('input[type="text"],textarea').on('touchstart', function(e) {
     e.stopPropagation();
     e.preventDefault();
+    var self = $(this) ;
     var content = $(this).parents('.content');
     var pos  = $(this).offset().top + content.scrollTop() - 62 ;
     content.animate({scrollTop : pos } , 300 , function () {
-        $(this).focus();
+        self.focus();
     }) ;
 });
 
